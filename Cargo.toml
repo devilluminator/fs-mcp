@@ -1,0 +1,19 @@
+[package]
+name = "fs-mcp"
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.85"
+
+[dependencies]
+# Keep the rmcp version in sync with your scrape-mcp Cargo.toml
+rmcp = { version = "0.8", features = ["server", "macros", "transport-streamable-http-server", "transport-streamable-http-server-session"] }
+axum = "0.8"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "fs", "process", "io-util", "io-std", "sync", "time", "signal", "net"] }
+serde = { version = "1", features = ["derive"] }
+regex = "1"
+ignore = "0.4"
+dunce = "1"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+serde_json = "1.0.154"
